@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Tic Tac Toe</title>
+
+    <style type="text/css">
+        .board {width: 350px; margin: 0 auto;}
+        .square {height:100px; width:100px; display:inline-block; border: 1px solid; margin: 3px;}
+        h1 {text-align: center; margin-bottom: 20px; font-size: 60px}
+        .square:hover {background-color: #cec0c0; opacity: .2;}
+        .turn {font-size: 40px; margin: 0 auto; margin-bottom: 30px; text-align: center; border: 2px solid; margin-top: 20 auto; max-width: 350px;}
+        .result {font-size: 40px; margin: 0 auto; margin-top: 20px; text-align: center; border: 2px solid; max-width: 310px}
+        .piece {font-size: 90px; text-align: center; padding: 0px;}
+    </style>
+</head>
+
+<body>
+
+    <h1>Tic Tac Toe</h1>
+    <div class="turn">
+        Player X's Turn
+    </div>
+    <div class="board">
+        <script>
+            const NUM_SQUARES = 9
+            for (i=0; i < NUM_SQUARES; i++) {
+                id = "sq"+i
+                document.write("<div class='square' id='"+ id + "'></div>")
+            }
+        </script>
+    </div>
+    <div class="result">
+        Player X Wins
+    </div>
+
+    <script>
+        for (i=0; i < NUM_SQUARES; i++) {
+            id="sq"+i
+            document.getElementById(id).innerHTML = "<div class='piece'>&nbsp;</div>"
+        }
+        
+        document.getElementById("sq2").innerHTML = "<div class='piece'>X</div>"
+        document.getElementById("sq3").innerHTML = "<div class='piece'>O</div>"
+        
+    </script>
+</body>
+
+
+
+</html>
